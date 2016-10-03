@@ -23,9 +23,4 @@ public class PlayerController : MonoBehaviour
         ), ForceMode2D.Force);
 
     }
-
-    void FixedUpdate()
-    {
-
-    }
 }
