@@ -14,13 +14,18 @@ public class PlayerController : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         // Aplicar a força no objeto
-        rb.AddForce(new Vector2(
-            -Input.GetAxis("Horizontal") * applyForce,
-            -Input.GetAxis("Vertical") * applyForce
-        ), ForceMode2D.Force);
+        //rb.AddForce(new Vector2(
+        //    -Input.GetAxis("Horizontal") * applyForce,
+        //    -Input.GetAxis("Vertical") * applyForce
+        //), ForceMode2D.Force);
+
+        if (Input.GetButton("Jump"))
+        {
+            rb.AddRelativeForce(Vector2.up * applyForce, ForceMode2D.Impulse);
+        }
 
     }
 }
