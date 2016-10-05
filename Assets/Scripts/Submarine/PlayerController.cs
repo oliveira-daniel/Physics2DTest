@@ -11,8 +11,7 @@ public class PlayerController : MonoBehaviour
     private bool downControl, upControl;
     public float downForce;
     private float actualForce;
-    [SerializeField]
-    private ParticleSystem downThrust, upThrust;
+    public ParticleSystem downThrust, upThrust;
     private ParticleSystem.EmissionModule downEmission, upEmission;
 
     void Awake()
